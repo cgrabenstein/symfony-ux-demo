@@ -1,0 +1,9 @@
+<div {{ attributes }}>
+    <h2>Multiple objects in an array. When the input is updated, the text <em>does not</em> update.</h2>
+    {% for key, dto in dtos %}
+        <p>
+        <input data-model="dtos[{{ key }}].value">
+        dtos[{{ key }}].value = {{ dtos[key].value }}
+        </p>
+    {% endfor %}
+</div>
